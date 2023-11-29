@@ -1,16 +1,22 @@
-function isPrime(num) {
-    if (num <= 1) return false;
-    for (let i = 2; i < num; i++) {
-        if (num % i === 0) {
-            return false;
+function isPrime(int) {
+    if (int <= 1) {
+        return false;
+    } else {
+        for (let i = 2; i < int; i++) {
+            if (int % i === 0) {
+                return false;
+            }
         }
     }
     return true;
 }
 
-// for (let n = 9; n < 100; i++) {
-//     if (n % 1 == 0 && n % n == 0) {
-//         console.log(n);
-//         break;
-//     }
-// }
+//Cecks for the closest and
+//greatest prime number
+for (let n = 4; n < 100; n++) {
+    if (isPrime(n)) {
+        console.log(n);
+        break;
+    }
+}
+
